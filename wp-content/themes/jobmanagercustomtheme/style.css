@@ -1,0 +1,117 @@
+/*
+Theme Name: Custom Job Manager Theme
+Theme URI: https://example.com
+Author: Muhammad Shaheen
+Author URI: https://example.com
+Description: A custom theme for displaying jobs using the Job Manager plugin.
+Version: 1.0
+
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #0073aa;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+main {
+    padding: 20px;
+}
+
+.jobs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.job-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.job-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-item h3 {
+    font-size: 18px;
+    color: #0073aa;
+    margin: 0 0 10px;
+}
+
+.job-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.job-item a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0073aa;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.job-item a:hover {
+    background-color: #005a87;
+}
+
+.job-details {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-details h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.job-details p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
