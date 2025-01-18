@@ -64,6 +64,24 @@ class Custom_Job_API {
         $args = [
             'post_type'      => 'job_listing', // Default post type for Job Manager.
             'posts_per_page' => -1,
+
+            'meta_query'     => [
+                [
+                    'key'     => '_job_expires',
+                    'compare' => 'EXISTS', // Ensure jobs without an expiration date are excluded.
+                    'type'    => 'DATE',
+                ],
+                [
+                    'key'     => '_featured',
+                    'compare' => 'EXISTS', // Ensure the featured field exists for sorting.
+                ],
+            ],
+            'orderby' => [
+                'meta_value_num' => '_featured', // Sort by featured status first.
+                'meta_value'     => '_job_expires', // Then by expiration date.
+            ],
+            'order' => 'DESC', 
+
         ];
 
         $jobs = get_posts( $args );
